@@ -2,7 +2,11 @@
 Vorjam is a small BT classic jammer based on one nrf24 module.
 
 ## Disclaimer
-This project is for educational purposes only. It's illegal to Jam other peoples devices without permission.
+This project is intended for educational and research purposes only.  
+Using radio frequency jamming devices may be illegal in your country or region.  
+The author does not condone or encourage any unlawful use of this code or hardware.  
+You are solely responsible for complying with local laws and regulations.  
+The author assumes no liability for any damage, interference, or legal consequences 
 
 ## Supported Boards:
 Waveshare Esp32 S3 Zero
