@@ -11,7 +11,7 @@ RF24 radio1(7, 10, 16000000);
 #define NUMPIXELS  1
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
-void initRadios() {
+void initRadio() {
   spiBus.begin(4, 5, 6);  // SCK=4, MISO=5, MOSI=6
 
   if (radio1.begin(&spiBus)) {
@@ -38,7 +38,7 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
 
-  initRadios();
+  initRadio();
   pixels.setPixelColor(0, pixels.Color(0, 5, 0));  
   pixels.show(); 
 }
