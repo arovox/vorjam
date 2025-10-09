@@ -7,15 +7,19 @@ SPIClass spiBus(FSPI);
 
 RF24 radio1(7, 10, 16000000);  
 
+//Setup neopixel LED
 #define PIN        21
 #define NUMPIXELS  1
 Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 void initRadio() {
-  spiBus.begin(4, 5, 6);  // SCK=4, MISO=5, MOSI=6
+  // SCK=4, MISO=5, MOSI=6
+  spiBus.begin(4, 5, 6); 
 
   if (radio1.begin(&spiBus)) {
+    
     Serial.println("Radio 1 okay");
+    
     radio1.setAutoAck(false);
     radio1.stopListening();
     radio1.setRetries(0, 0);
@@ -39,6 +43,7 @@ void setup() {
   delay(1000);
 
   initRadio();
+  //set color red on integrated LED
   pixels.setPixelColor(0, pixels.Color(0, 5, 0));  
   pixels.show(); 
 }
