@@ -1,5 +1,5 @@
-# vorjam - Bt classic Jammer
-Vorjam is a small BT classic jammer based on one nrf24 module.
+# vorjam - Bt classic and WiFi Jammer
+Vorjam is a compact and affordable wireless jammer for Bluetooth Classic and WiFi, built around one or two NRF24L01 modules. Designed for minimal hardware and plug-and-play deployment.
 
 ## Disclaimer
 This project is intended for educational and research purposes only.  
@@ -12,23 +12,27 @@ The author assumes no liability for any damage, interference, or legal consequen
 Waveshare Esp32 S3 Zero
 
 ## Necessary Libraries:
-### Install these Librarys over the Arduino library manager.
+### Install these Libraries over the Arduino library manager.
      NRF24 by TMRh20 and Avamander  
      Adafruit NeoPixel by Adafruit
 
 ## Flashing Instructions
+
 1. You need the Arduino IDE or any other code editor with the Arduino Framework.
-2. Install the additional Boards Manager by pasting the following link into the preferences Tab:  
+2. Install the additional Boards Manager by pasting the following link into the Preferences tab:  
    https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
-3. Copy the code into the editor and connect your Esp32 board.
-4. Install the necessary Libraries over the lib manager.
-6. Upload the code. When you see the red LED it works.
+3. Copy the code into the editor and connect your ESP32 board.
+4. Install the necessary libraries via the Library Manager.
+5. **Important:** WiFi jamming is disabled by default.  
+   To enable it, remove the `//` comment markers from the corresponding lines in the `loop()` section of the code.
+6. Upload the code. When you see the red LED, it works.
+
 
 ## Pinout NRF to Esp32 S3 Zero
 The NRFs are wired up to the Esp32 via SPI.
 #### The second NRF is deactivated by default. To activate it, remove the comment delimiters from the corresponding code sections.
 
-| Pin on NRF | Pin on ESP32 (NRF1)| Pin onESP32 (NRF2)  |
+| Pin on NRF | Pin on ESP32 (NRF1)| Pin on ESP32 (NRF2)  |
 |------------|--------------------|---------------------|
 | VCC        | 3.3V               | 3.3V                |
 | GND        | GND                | GND                 |
@@ -37,5 +41,19 @@ The NRFs are wired up to the Esp32 via SPI.
 | SCK        | D4                 | D4                  |
 | MO         | D6                 | D6                  |
 | MI         | D5                 | D5                  |
+
+## Jamming Capabilities
+
+- **Bluetooth Classic** – supported since v0.0  
+- **WiFi (2.4 GHz)** – supported since v0.1 (disabled by default)  
+> It is recommended to run only one jammer at a time (either BT or WiFi), especially on low-power setups.  
+> Running both simultaneously may reduce effectiveness or cause instability, depending on your hardware.
+
+
+  
+  
+## Keywords
+`nrf24l01` `esp32` `wifi jammer` `bluetooth jammer` `rf testing` `low-cost hardware`
+
 
 
