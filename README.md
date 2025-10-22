@@ -32,7 +32,7 @@ Waveshare Esp32 S3 Zero
 The NRFs are wired up to the Esp32 via SPI.
 #### The second NRF is deactivated by default. To activate it, remove the comment delimiters from the corresponding code sections.
 
-| Pin on NRF | Pin on ESP32 (NRF1)| Pin on ESP32 (NRF2)  |
+| Pin on NRF | Pin on ESP32 (NRF1)| Pin on ESP32 (NRF2) |
 |------------|--------------------|---------------------|
 | VCC        | 3.3V               | 3.3V                |
 | GND        | GND                | GND                 |
@@ -41,6 +41,7 @@ The NRFs are wired up to the Esp32 via SPI.
 | SCK        | D4                 | D4                  |
 | MO         | D6                 | D6                  |
 | MI         | D5                 | D5                  |
+|IRQ         | not used           | not used            |
 
 ## Jamming Capabilities
 
