@@ -6,7 +6,7 @@
 SPIClass spiBus(FSPI);
 
 RF24 radio1(7, 10, 16000000);
-RF24 radio2(20, 21, 16000000); 
+RF24 radio2(2, 3, 16000000); 
 
 #define PIN        21
 #define NUMPIXELS  1
