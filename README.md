@@ -29,9 +29,10 @@ Esp32 c3 super mini
 6. Upload the code. When you see the red LED, it works.
 
 
-## Pinout NRF to Esp32 S3 Zero
+## Pinout
 The NRFs are wired up to the Esp32 via SPI.
-#### The second NRF is deactivated by default. To activate it, remove the comment delimiters from the corresponding code sections.
+#### The second NRF is deactivated by default. To activate it, remove the comment delimiters from the corresponding code sections.  
+##### Waveshare Esp32 S3 Zero
 
 | Pin on NRF | Pin on ESP32 (NRF1)| Pin on ESP32 (NRF2) |
 |------------|--------------------|---------------------|
@@ -44,6 +45,17 @@ The NRFs are wired up to the Esp32 via SPI.
 | MI         | D5                 | D5                  |
 |IRQ         | not used           | not used            |
 
+#### Esp32 C3 Super-Mini
+| Pin on NRF | Pin on ESP32 C3 (NRF1)| Pin on ESP32 C3 (NRF2) |
+|------------|-----------------------|------------------------|
+| VCC        | 3.3V                  | 3.3V                   |
+| GND        | GND                   | GND                    |
+| CE         | D9                    | D2                     |
+| CSN        | D10                   | D3                     |
+| SCK        | D4                    | D4                     |
+| MO         | D6                    | D6                     |
+| MI         | D5                    | D5                     |
+|IRQ         | not used              | not used               |
 ## Jamming Capabilities
 
 - **Bluetooth Classic** – supported since v0.0  
