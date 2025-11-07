@@ -52,7 +52,7 @@ The NRFs are wired up to the Esp32 via SPI.
 | GND        | GND                   | GND                    |
 | CE         | D9                    | D2                     |
 | CSN        | D10                   | D3                     |
-| SCK        | D4                    | D4                     |
+| SCK        | D4                    | D7                     |
 | MO         | D6                    | D6                     |
 | MI         | D5                    | D5                     |
 |IRQ         | not used              | not used               |
