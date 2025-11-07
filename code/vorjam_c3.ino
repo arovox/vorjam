@@ -13,7 +13,7 @@ int WiFiindex;
 int WiFichannel;
 
 void initRadios() {
-  spiBus.begin(4, 5, 6);  // SCK=4, MISO=5, MOSI=6
+  spiBus.begin(7, 5, 6);  // SCK=4, MISO=5, MOSI=6
 
   if (radio1.begin(&spiBus)) {
     Serial.println("Radio 1 okay");
