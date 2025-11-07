@@ -7,9 +7,6 @@ SPIClass spiBus(FSPI);
 RF24 radio1(9, 10, 16000000);
 RF24 radio2(2, 3, 16000000); 
 
-#define PIN        21
-#define NUMPIXELS  1
-Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 
 int WiFiChannels[] = {12, 37, 62};
 int WiFiindex;
@@ -71,8 +68,6 @@ void setup() {
   delay(1000);
 
   initRadios();
-  pixels.setPixelColor(0, pixels.Color(0, 5, 0));  
-  pixels.show(); 
 }
 
 void loop() {
