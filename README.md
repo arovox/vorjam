@@ -62,6 +62,7 @@ The NRFs are wired up to the Esp32 via SPI.
 - **WiFi (2.4 GHz)** – supported since v0.1 (disabled by default)  
 > It is recommended to run only one jammer at a time (either BT or WiFi), especially on low-power setups.  
 > Running both simultaneously may reduce effectiveness or cause instability, depending on your hardware.
+> The BT classic jammer itselfs is also allone pretty effective against other protocols like BLE or WiFi
 
 
   
