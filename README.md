@@ -11,6 +11,7 @@ The author assumes no liability for any damage, interference, or legal consequen
 ## Supported Boards:
 Waveshare Esp32 S3 Zero
 Esp32 c3 super mini
+Esp32-Wroom32
 
 ## Necessary Libraries:
 ### Install these Libraries over the Arduino library manager.
