@@ -9,9 +9,9 @@ You are solely responsible for complying with local laws and regulations.
 The author assumes no liability for any damage, interference, or legal consequences 
 
 ## Supported Boards:
-Waveshare Esp32 S3 Zero
-Esp32 c3 super mini
-Esp32-Wroom32
+Waveshare Esp32 S3 Zero  
+Esp32 c3 super mini  
+Esp32-Wroom32  
 
 ## Necessary Libraries:
 ### Install these Libraries over the Arduino library manager.
