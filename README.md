@@ -57,6 +57,17 @@ The NRFs are wired up to the Esp32 via SPI.
 | MO         | D6                    | D6                     |
 | MI         | D5                    | D5                     |
 |IRQ         | not used              | not used               |
+#### Esp32 WROOM32
+| Pin on NRF | Pin on ESP32 (NRF1)| Pin on ESP32 (NRF2) |
+|------------|--------------------|---------------------|
+| VCC        | 3.3V               | 3.3V                |
+| GND        | GND                | GND                 |
+| CE         | D4                 | D2                  |
+| CSN        | D15                | D17                 |
+| SCK        | D18                | D18                 |
+| MO         | D23                | D23                 |
+| MI         | D19                | D19                 |
+| IRQ        | not used           | not used            |
 ## Jamming Capabilities
 
 - **Bluetooth Classic** – supported since v0.0  
