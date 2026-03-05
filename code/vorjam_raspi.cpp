@@ -15,7 +15,7 @@ void initRadios() {
     radio.setDataRate(RF24_2MBPS);
     radio.setCRCLength(RF24_CRC_DISABLED);
 
-    // Startet den konstanten Träger wie beim ESP32
+
     radio.startConstCarrier(RF24_PA_MAX, 45);
 }
 
@@ -23,8 +23,8 @@ void hop() {
     uint8_t ch = rand() % 81;
     radio.setChannel(ch);
 
-    // kurze Pause wie beim ESP32
-    usleep((rand() % 60));  // Mikrosekunden
+
+    usleep((rand() % 60));
 }
 
 int main() {
