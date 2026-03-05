@@ -12,13 +12,24 @@ The author assumes no liability for any damage, interference, or legal consequen
 Waveshare Esp32 S3 Zero  
 Esp32 c3 super mini  
 Esp32-Wroom32  
+Raspberry Pi  
 
 ## Necessary Libraries:
 ### Install these Libraries over the Arduino library manager.
      NRF24 by TMRh20 and Avamander  
      Adafruit NeoPixel by Adafruit
+### When using the Raspberry Pi run the code in your Console
+     sudo apt update  
+     sudo apt install git cmake g++ -y  
+     git clone https://github.com/nRF24/RF24.git  
+     cd RF24  
+     mkdir build && cd build  
+     cmake ..  
+     make -j4  
+     sudo make install  
+     
 
-## Flashing Instructions
+## Flashing Instructions for Esp32 Boards
 
 1. You need the Arduino IDE or any other code editor with the Arduino Framework.
 2. Install the additional Boards Manager by pasting the following link into the Preferences tab:  
@@ -29,6 +40,13 @@ Esp32-Wroom32
    To enable it, remove the `//` comment markers from the corresponding lines in the `loop()` section of the code.
 6. Upload the code. When you see the red LED, it works.
 
+
+## Flashing Instructions for Raspberry Pi Boards
+1. Download the Libraries
+2. Compile the File [vorjam_raspi.cpp](code/vorjam_raspi.cpp) with   
+   >g++ vorjam_raspi.cpp -o nrf -lrf24
+3. Execute the code with  
+   >sudo ./nrf
 
 ## Pinout
 The NRFs are wired up to the Esp32 via SPI.
@@ -68,6 +86,18 @@ The NRFs are wired up to the Esp32 via SPI.
 | MO         | D23                | D23                 |
 | MI         | D19                | D19                 |
 | IRQ        | not used           | not used            |
+#### Raspberry Pi
+| Pin on NRF | Pin on Raspberry Pi| 
+|------------|--------------------|
+| VCC        | 3.3V               |
+| GND        | GND                |
+| CE         | GPIO 22            |
+| CSN        | GPIO 8 (CS0)       |
+| SCK        | GPIO 11 (SCLK)     |
+| MO         | GPIO 10 (MOSI)     |
+| MI         | GPIO 9 (MISO)      |
+| IRQ        | not used           | 
+
 ## Jamming Capabilities
 
 - **Bluetooth Classic** – supported since v0.0  
@@ -76,8 +106,9 @@ The NRFs are wired up to the Esp32 via SPI.
 > Running both simultaneously may reduce effectiveness or cause instability, depending on your hardware.  
 > The BT classic jammer itselfs is also allone pretty effective against other protocols like BLE or WiFi
 
-
-  
+## Note
+The Raspberry Pi version supports only **ONE** NRF and just The **BT-jamming**.  
+SPI is deactivated by default on the Raspberry Pi. Use `sudo raspi-config` and navigate to `Interface Options->SPI->Enable`
   
 ## Keywords
 `nrf24l01` `esp32` `wifi jammer` `bluetooth jammer` `rf testing` `low-cost hardware`
